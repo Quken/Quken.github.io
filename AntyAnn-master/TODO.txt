@@ -1,0 +1,61 @@
+.grid {
+    margin: 0 13%;    
+}
+
+.grid .features-area {
+    margin: 100px 8.5% 0;
+}
+
+.grid .features-area .transform-ideas div {
+    height: 60px;
+    box-shadow: 0 30px 60px rgba(27, 233, 56, 0.2), 0 10px 20px rgba(27, 233, 56, 0.2), 0 20px 40px rgba(27, 233, 56, 0.2);
+    border-radius: 25px;
+    margin-top: 15px;
+    background-color: #1be938;
+}
+//p удален внутри а
+.grid .features-area .transform-ideas a {
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* text-align: center; */
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    padding: 18px 0;
+}
+
+.grid .features-area .transform-ideas {
+    display: grid;
+    grid-template-columns: 6.5fr 2.2fr;
+    grid-gap: 0 12%;
+}
+
+.grid .features-area .transform-ideas h6 {
+    opacity: 0.7;
+    color: #141414;
+    font-family: Raleway;
+    font-size: 18px;
+    padding: 40px 0 90px;
+}
+
+.grid .slider-area {
+    display: grid;
+    grid-template-columns: 4fr 3.98fr;
+    grid-gap: 0 21%;
+    margin-bottom: 105px;
+}???????????????????????????
+
+.grid .rapture-area p {
+    font-size: 16px;
+    margin-bottom: 36px;
+}
+
+.grid .rapture-area .rapture-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px 5%;
+    padding: 0 9.5% 85px;
+    text-align: justify;
+}

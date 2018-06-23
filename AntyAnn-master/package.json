@@ -1,0 +1,27 @@
+{
+  "name": "antyann",
+  "version": "1.0.0",
+  "description": "Working... git init  git clone <url>  git branch <branch_name> git checkout <branch_name>",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^3.1.0",
+    "gulp-scss": "^1.4.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quken/AntyAnn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quken/AntyAnn/issues"
+  },
+  "homepage": "https://github.com/Quken/AntyAnn#readme"
+}
