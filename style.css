@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    height: 80%;
+    
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -14,6 +14,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     justify-content: center;
+    padding: .5rem 1.25rem .5rem;
+    
 }
 
 li {
@@ -26,6 +28,7 @@ li {
     padding: 1rem 1.25rem;
     font-family: sans-serif;
     font-size: 1.5rem;
+    text-align: center;
     text-decoration: none;
     color: white;
     position: relative;
@@ -62,7 +65,6 @@ li {
 }
 
 .social {
-    height: 15%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -71,11 +73,14 @@ li {
     align-items: center;
     justify-content: center;
     flex-flow: row nowrap;
-    }
+    padding-bottom: 1rem;
+
+}
 
 .social-a {
     text-decoration: none;
     font-size: 1em;
+    font-family: sans-serif;
     position: relative;
     transition: all 0.6s;
     padding: 1rem 1.25rem;
@@ -98,3 +103,24 @@ li {
     background: red;
 }
 
+.page-caption{
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.page-caption>a{
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    transition: .3s all ease;  
+    text-decoration: none;
+}
+
+.page-caption>a:hover {
+    color: #00aeff;
+    border-bottom: 2px solid #00aeff;
+    transition: .3s all ease;
+}

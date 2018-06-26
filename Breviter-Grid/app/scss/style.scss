@@ -1,0 +1,931 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+@font-face {
+	font-family: Bira; 
+	src: url("../fonts/Bira.ttf"); 
+}
+
+@font-face {
+	font-family: MontserratBold; 
+	src: url("../fonts/Montserrat-Bold.ttf"); 
+}
+
+$container-width: 67.34%;
+$dark-green: #22bb66;
+$header-content-width: 40%;
+$mylightgrey: #a9a6a6;
+$mydarkgrey: rgba(0, 0, 0, 0.3);
+$main-grey-color: #808080;
+$main-dark-grey-color: #666;
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0 (100%-$container-width) / 2;
+
+}
+
+.top-header {
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	padding: 20px 0;
+}
+
+.list-icon, .main-nav, .search-icon {
+	display: inline-block;
+}
+
+.list-icon, .search-icon {
+	padding: 5px 20% 0;
+	display: inline;
+	text-align: center;
+	width: 10%;
+}
+
+.list-icon {
+	border-right: 1px dotted $mylightgrey;	
+	justify-self: end;
+	
+}
+
+.search-icon{
+	border-left: 1px dotted $mylightgrey;	
+	justify-self: start;
+	
+}
+
+
+.main-nav{
+	padding: 5px 0;
+	text-align: center;
+	div {
+		display: inline-block;
+		padding:  0 5%;
+		transition: all .5s ease;
+		border-left: 1px dotted $mylightgrey;
+		a {
+			color: #4d4d4d;
+			font-family: MontserratBold;
+			font-size: 13px;
+			text-transform: uppercase;
+			transition: all .5s ease;
+		}
+	}
+
+	div:first-child {
+		padding-left: 0;
+		border-left: 0;
+	}
+
+	div:last-child {
+		padding-right: 0;
+	}
+
+	div:hover a{
+		color: $dark-green;
+		transition: all .5s ease;
+	}
+}
+
+.social {
+
+	margin-bottom: 26px;
+	.social-item {
+		display: inline-block;
+		margin: 0 1%;
+		vertical-align: top;
+		transition: all .5s ease;
+		&:hover {
+			opacity: 1;
+			transition: all .5s ease;
+		}
+	}
+	
+	.instagram-icon {
+		opacity: .3;
+	}
+}
+
+.header-background {
+	background-image: url("../img/header-bg.png");
+	.header-background-content {
+		padding: 70px 0 100px;
+		justify-self: center;
+		width: $header-content-width;
+		text-align: center;
+		
+		.special-hr {
+			vertical-align: middle;
+			display: inline-block;
+			width: 24%;
+			background-color: $dark-green;
+			color: $dark-green;
+			height: 1px;
+			border: 0;	
+		}
+		.tagline {
+			color: #000000;
+			font-family: "Bira";
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: 1.2px;
+			text-align: center;
+			display: inline;
+			vertical-align: middle;
+		}
+		.main-logo-figure {
+			margin-top: 30px;
+		}
+	}
+}
+
+.playfair {
+	background-color: $mydarkgrey;
+	padding: 170px 0 120px;
+	.special-grid {
+		margin: 0;
+		grid-template-columns: 1fr 3fr 1fr;
+		a {
+			justify-self: center;
+			align-self: center;
+		}
+	}
+	.arrow-left, .arrow-right {
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		background-color: #000000;
+		opacity: 0.2;
+		display: inline-block;
+		padding: 20px 30px;
+		width: fit-content;
+		transition: all .5s ease;
+		
+	}
+
+	.arrow-left:hover, .arrow-right:hover {
+		opacity: 1;
+		transition: all .5s ease;		
+	}
+
+	.playfair-block {
+		margin: 0 auto;
+		text-align: center;
+		.playfair-header {
+			color: #ffffff;
+			font-family: MontserratBold;
+			font-size: 30px;
+			margin: 0 auto;
+			width: 50%;
+			text-align: center;
+		}
+
+		.playfair-p {
+			padding: 40px 0 60px;
+			width: 45%;
+			text-align: center;
+			margin: 0 auto;
+			color: #ffffff;
+			font-family: "Droid Serif";
+			font-size: 15px;
+			font-style: italic;
+		}
+		.btn-read-more {
+			padding: 15px 10px;
+			width: 20%;
+			margin: 0 auto;
+			cursor: pointer;
+			box-shadow: 0 2px 1px rgba(11, 145, 70, 0.35);
+			background-color: $dark-green;
+			border: 1px solid rgba(255, 255, 255, .2);
+			color: #ffffff;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 14px;
+			text-transform: uppercase;
+			/* Text style for "READ MORE" */
+			letter-spacing: 1.82px;
+			transition: all .5s ease;		
+			&:hover {
+				transition: all .5s ease;		
+				border: 1px solid black;
+			}
+		}
+		
+	}
+}
+
+.section-main {
+	background-image: url(../img/header-bg.png);
+	
+		.main-grid {
+			grid-template-columns: 1fr 2fr;
+			padding-top: 90px;
+			grid-gap: 0 1%;
+			.main-first-column {
+				grid-template-rows: 2fr 4fr 1fr 6fr 1fr 2fr 1fr;
+				.world-gift-block {
+					background-color: #808080;
+					border: 15px solid white;
+					height: 400px;
+					text-align: center;
+					margin-top: 75px;
+					margin-bottom: 60px;
+					figure {
+						position: relative;
+						top: 60%;
+						left: 0;
+						figcaption {
+							color: #71f9ae;
+							font-family: MontserratBold;
+							font-size: 12px;
+							font-weight: 700;
+							line-height: 14px;
+							text-transform: uppercase;
+							/* Text style for "O, R GET S" */
+							letter-spacing: 0.24px;
+							margin-top: 15px;
+						}
+					}
+				}
+
+				.share-on-div {
+					background:  #fff;
+					padding: 25px 4% 60px;
+					text-align: center;
+					margin-bottom: 50px;
+					.share-on-p {
+						display: inline;
+						padding: 10px 8%;
+						border: 1px solid #dfdfdf;
+						margin: 0 4%;
+					  a {	
+							color: #a5a5a5;
+							font-family: MontserratBold;
+							font-size: 10px;
+							font-weight: 400;
+							line-height: 32px;
+							text-transform: uppercase;
+							/* Text style for "SHARE ON" */
+							letter-spacing: 1.8px;
+							text-decoration: none;
+							transition: all .5s ease;		
+							&:hover{
+								color: $dark-green;
+								transition: all .5s ease;		
+								
+							}
+						}
+						
+					}
+					.follow-me-div {
+						text-align: left;
+						margin: 32px 0 0 0;
+						.follow-me-span {
+							color: #969696;
+							font-family: MontserratBold;
+							font-size: 12px;
+							font-weight: 700;
+							line-height: 14px;
+							text-transform: uppercase;
+							/* Text style for "F, OLLOW M" */
+							letter-spacing: 0.24px;
+							transition: all .5s ease;		
+						}
+						.grey-follow-arrow {
+							margin: 0 3% 0;
+						}	
+						.follow-me-ul {
+							display: inline-block;
+							width: 60%;
+							.follow-me-li {
+								display: inline-block;
+								background-color: #262626;
+								border-radius: 50%;
+								width: 30px;
+								height: 30px;
+								vertical-align: text-bottom;
+								text-align:center;
+								transition: all .5s ease;		
+								
+								img {
+									vertical-align: -webkit-baseline-middle
+								}
+								&:hover {
+									background: $dark-green;
+									transition: all .5s ease;		
+											
+								}
+							}
+							
+						}
+					}
+				}
+				.lara-croft-div {
+					background: #fff;
+					.share-on-div {
+						margin-bottom: 0;
+					}
+					.author-icon-block {
+						height: 266px;
+						background-color: #666666;
+						width: 85%;
+						margin: 0 auto 45px;
+					}
+					.lara-croft-p {
+						text-align: center;
+						padding-bottom: 30px;
+						color: #4a4a4a;
+						font-family: "Droid Serif";
+						font-size: 14px;
+						width: 78%;
+						margin: 0 auto;
+					}
+					.read-more-a {
+						color: #22bb66;
+						font-family: "Droid Serif";
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 24px;
+						text-decoration: underline;
+						/* Text style for "→" */
+						font-family: "Times New Roman PSMT";
+						div {
+							text-align: center;
+							padding-bottom: 30px;
+						}
+					}
+					.lara-croft-icon {
+						text-align: center;
+						margin-bottom: 35px;
+					}
+					.social-list {
+						text-align: center;
+						padding-bottom: 50px;
+						.list-item {
+							display: inline;
+							margin: 0 3%;
+						}
+					}
+				}
+				.subscribe-div {
+					.share-on-div {
+						margin-bottom: 0;
+						padding-bottom: 40px;		
+					}
+					margin-top: 50px;
+					background: #fff;
+					text-align:center;
+					margin-bottom: 60px;
+				}
+				.subscribe-area {
+					width: 90%;
+					margin: 0 auto;
+					padding-bottom: 60px;
+					input{
+						width: 91%;
+						padding: 5px 4.3%;
+						
+					}
+					input[type=text] {
+						background-color: #f8f8f8;
+						border-top: 1px solid #f8f8f8;
+						border-left: 1px solid #f8f8f8;
+						border-right: 1px solid #f8f8f8;
+						color: #bdbdbd;
+						font-family: Montserrat;
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 26px;
+					}
+					input[type=submit] {
+						width: 100%;
+						background: $dark-green;
+						color: #f7f7f7;
+						font-family: MontserratBold;
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 26px;
+						text-transform: uppercase;
+						border-bottom-left-radius: 5px;
+						border-bottom-right-radius: 5px;
+						border: 0;
+						cursor: pointer;
+					}
+				}
+				.hot-topics-div {
+					background: #fff;
+					margin-bottom: 60px;
+					.share-on-div {
+						margin-bottom: 0;
+					}
+					.hot-topics-area {
+						display: grid;
+						grid-template-columns: 1fr 3fr;
+						grid-template-rows: 1fr 1fr 1fr 1fr;
+						grid-gap: 35px 5%;
+						width: 90%;
+						margin: 0 auto;
+						padding-bottom: 30px;
+						.hot-topics-icon {
+							background: $main-dark-grey-color;
+						}
+						.hot-topics-content {
+							color: #262626;
+							font-family: MontserratBold;
+							font-size: 13px;
+							font-weight: 700;
+							line-height: 22px;
+						}
+					}
+				}
+				.search-div {
+					background: #fff;
+
+					.share-on-div {
+						margin-bottom: 0;
+						padding-bottom: 40px;
+					}
+					.search-section-area {
+						width: 90%;
+						margin: 0 auto;
+						padding-bottom: 35px;
+						input{
+							width: 91%;
+							padding: 5px 4.3%;
+							width: 90%;
+							margin: 0 auto;
+						}
+						input[type=text] {
+							background-color: #f8f8f8;
+							border-top: 1px solid #f8f8f8;
+							border-left: 1px solid #f8f8f8;
+							border-right: 1px solid #f8f8f8;
+							color: #bdbdbd;
+							font-family: Montserrat;
+							font-size: 12px;
+							font-weight: 400;
+							line-height: 26px;
+							width: 70%;
+						}
+						.search-area-icon {
+							display: inline-block;
+							height: 27px;
+							vertical-align: top;
+							background: #22bb66;
+							width: 19%;
+							text-align: center;
+							padding-top: 12px;
+							border-top-right-radius: 5px;
+							border-bottom-right-radius: 5px;
+						}
+					}
+				}
+			}
+			.main-second-column {
+				grid-template-rows: 2fr 6fr 6fr 6fr 6fr;
+				text-align:center;
+				justify-self: center;
+				.lifestyle-two-items {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 0 1%;
+				}
+				.news-item {
+					margin-top: 75px;
+					background-color: #ffffff;
+					.grey-block {
+						height: 396px;
+						background-color: #666666;
+					}
+					.travel-block {
+						width: 10%;
+						margin: 0 auto;
+						display: inline-block;
+						margin-top: 32px;
+						color: #22bb66;
+						font-family: MontserratBold;
+						font-size: 10px;
+						font-weight: 400;
+						line-height: 14px;
+						text-transform: uppercase;
+						/* Text style for "TRAVEL" */
+						letter-spacing: 1.8px;
+						padding: 10px 20px;
+						margin-bottom: 30px;
+						border: 1px solid $dark-green;
+						a {
+							color: $dark-green;							
+						}
+					}
+					.mid-bullet {
+						display: inline-block;
+					}
+					h4 {
+						margin-bottom: 45px;
+						color: #262626;
+						font-family: MontserratBold;
+						font-size: 24px;
+						font-weight: 700;
+						line-height: 32px;
+						padding: 0 5%;
+					}
+					p {
+						margin-bottom: 50px;
+						color: #4a4a4a;
+						font-family: "Droid Serif";
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 24px;
+						padding: 0 5%;
+					}
+					.news-footer {
+						a {
+							font-family: MontserratBold;
+							color: #838383;
+						}
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr;
+						background-color: #f9f9f9;
+						padding: 20px 0;
+						.news-date {
+							color: #838383;
+							font-family: MontserratBold;
+							font-size: 10px;
+							font-weight: 400;
+							line-height: 14px;
+							text-transform: uppercase;
+							letter-spacing: 1.8px;
+							padding: 11px 5%;
+							border: 1px solid #808080;
+							height: fit-content;
+							width: 50%;
+							margin: 0 auto; 
+							justify-self: center;
+						}
+						.social {
+							padding: 11px 5%;
+							margin-bottom: 0;
+						}
+						.read-more {
+							display: grid;
+							grid-template-columns: 5fr 1fr;
+							width: 70%;
+							color: #838383;
+							font-size: 10px;
+							font-weight: 400;
+							line-height: 14px;
+							text-transform: uppercase;
+							/* Text style for "READ MORE" */
+							letter-spacing: 1.8px;
+							justify-self: center;
+							.read-more-arrow-div {
+								background: $dark-green;
+								height: 14px;
+								border-top: 1px solid $dark-green;
+								border-bottom: 1px solid $dark-green;
+								padding: 11px 5%;
+								figure {
+									height: 38px;
+								}
+							}
+							.read-more-div {
+								border-top: 1px solid #808080;
+								border-bottom: 1px solid #808080;
+								border-left: 1px solid #808080;
+								
+								padding: 11px 5%;
+								height: fit-content;
+							}	
+						}
+					}
+				}
+			}
+		.lifestyle-divided {
+
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 0 15%;
+				background: #fff;
+
+				position: relative;
+				top: 0; 
+				left: 0;
+
+
+				margin: 0;
+				padding: 0;
+
+				div {
+					height: inherit;
+					width: 100%;
+					padding: 104px 0;
+					background: $main-grey-color;
+					display: inline-block;
+				}
+				span {
+					position: absolute;
+					top: 35%;
+					left: 25%;
+				}
+		}
+		.lifestyle-divided, .lifestyle-block {
+			box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+			border: 6px solid #ffffff;
+			justify-self: center;
+
+			span {
+				padding: 15px 15%;
+				background: white;
+				color: #3e3e3e;
+				font-family: MontserratBold;
+				font-size: 12px;
+				font-weight: 700;
+				line-height: 14px;
+				text-transform: uppercase;
+				/* Text style for "LIFESTYLE" */
+				letter-spacing: 0.24px;
+				border: 5px double $main-grey-color;
+			}
+		}
+		.lifestyle-block {
+			padding: 96px;
+			background-color: $main-grey-color;
+			
+		} 
+	}
+	.type-posts {
+		text-align: left;
+		width: 41%;
+		margin: 0 auto;
+		padding: 60px 0 ;
+		a {
+			color: #262626;
+			font-family: MontserratBold;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 14px;
+			text-transform: uppercase;
+			transition: all .5s ease;		
+			
+			letter-spacing: 0.24px;
+			&:hover {
+				color: $dark-green;
+				transition: all .5s ease;		
+			}
+		}
+	}
+}
+
+.footer-div {
+	display: grid;
+	grid-template-rows: 4fr 6fr 1fr;
+	
+	.footer-grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		padding: 40px 0 60px;
+		text-align: center;
+		grid-gap: 0 4%;
+	
+		.subscribe-footer-area {
+			height: fit-content;
+			align-self: center;
+			.borders-footer-containter {
+				border-left: 1px dotted #d5d5d5;;
+				border-right: 1px dotted #d5d5d5;;
+				padding: 0 5%;
+				label {
+					color: #666666;
+					font-family: MontserratBold;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 14px;
+					/* Text style for "S, ubscrib" */
+					letter-spacing: 0.3px;
+
+				}
+				.subcribe-btn-area {
+					display: grid;
+					grid-template-columns: 5fr 1fr;
+					margin-top: 5px;
+					a {
+						padding-top: 9px;
+					}
+					#subscribe-btn {
+						background-color: #f8f8f8;
+						padding: 10px;
+						border-top: 1px solid #f8f8f8;
+						border-left: 1px solid #f8f8f8;
+						border-bottom: 1px solid #f8f8f8;
+
+						display: inline-block;
+						// margin: 20px auto 0;
+					}
+					.subscribe-footer-green-btn {
+						display: inline;
+						background-color: $dark-green;
+						padding: 10px;
+						color: #ffffff;
+						font-family: MontserratBold;
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 14px;
+						text-transform: uppercase;
+						/* Text style for "S, UBSCRIB" */
+						letter-spacing: 0.24px;
+						border-top-right-radius: 5px;
+						border-bottom-right-radius: 5px;
+					}
+				}
+			}
+		}
+		.go-top-a {
+			color: #262626;
+			font-family: MontserratBold;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 14px;
+			text-transform: uppercase;
+			/* Text style for "TO TOP" */
+			letter-spacing: 0.26px;
+			align-self: center;
+		}
+		.go-top {
+			background-color: #f1f1f1;
+			border-radius: 50%;
+			width: 50%;
+			margin: 0 auto;
+			padding: 13% 0;
+		}
+	}
+	.my-instagmam-footer {
+		background-color: $main-grey-color;
+		padding-top: 150px;
+		.my-instagram-grid {
+			text-align: center;
+			.my-instagram-div {
+				background-color: $dark-green;
+				padding: 10px;
+				color: #ffffff;
+				font-family: MontserratBold;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14px;
+				text-transform: uppercase;
+				/* Text style for "S, UBSCRIB" */
+				letter-spacing: 0.24px;
+				width: 20%;
+				margin: 0 auto;
+			}
+		}
+	}
+	.all-rigths-reserved {
+		color: #262626;
+		font-family: "Playfair Display";
+		font-size: 14px;
+		font-style: italic;
+		line-height: 14px;
+		/* Text style for "@, 2015 -" */
+		letter-spacing: 0.28px;
+		text-align:center;
+		padding: 25px 0;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.header-background {
+		.header-background-content {
+			.special-hr {
+				display: none;
+			}
+		}
+	}
+	.section-main {
+		.main-grid {
+			.main-first-column {
+			  .share-on-div { 
+				 	.follow-me-div {
+						text-align: center;
+				 	}
+					&>img {
+					display: none;
+					}
+				}
+			}
+		}
+	}
+	.footer-div {
+		.footer-grid {
+			.go-top {
+				background: none;
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.grid {
+		margin: 0;
+	}
+	.section-main {
+		.main-grid {
+			.main-second-column {
+				.lifestyle-two-items {
+					grid-auto-columns: auto;
+					grid-auto-rows: auto;
+					grid-template-columns: auto;
+				}
+			}
+		}
+	}
+	.footer-div {
+		grid-template-rows: 3fr 1fr 1fr;
+		.footer-grid {
+			grid-template-columns: auto;
+			grid-auto-columns: auto;
+			grid-auto-rows: auto;
+			grid-gap: 20px 0;
+		}
+		.my-instagmam-footer {
+			padding: 50px;
+			align-self: center;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main-nav div {
+    /* display: inline-block; */
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    /* padding: 0 5%; */
+    transition: all .5s ease;
+		border-left: 1px dotted #a9a6a6;
+		font-size: 3em;
+		border-left: 0;
+	}
+	.top-header {
+		align-items: center;
+	}
+	.section-main {
+		.main-grid {
+			grid-auto-columns: auto;
+			grid-auto-rows: auto;
+			grid-template-columns: 1fr;
+			.lifestyle-divided {
+				span {
+					left: 30%;
+				}
+			}
+		}
+	}
+}
