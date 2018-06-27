@@ -305,8 +305,7 @@ header {
     height: fit-content; }
   .sub-menu ul {
     display: block; }
-  .sub-menu ul li:nth-child(-n+5) {
-    display: none; }
+  
   .sub-menu-button {
     display: block;
     margin: 0 auto; }
@@ -647,6 +646,8 @@ header {
     border: 1px solid rgba(20, 20, 20, 0.1); }
   .box2 img {
     display: none; } }
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-components {
@@ -2343,3 +2344,47 @@ body {
     width: 100%;
     padding: 10px 0;
     font-size: 1.3rem; } }
+
+    @media screen and (min-width: 1024px) and (max-width: 1208px) {
+      .sub-menu ul {
+        display: block;
+        margin: 0 auto;
+      }
+      .sub-menu ul li:nth-child(-n+5) {
+        display: none;
+      }
+      .sub-menu-button {
+        display: grid;
+        grid-template-columns: 16% 58% 16%;
+        grid-template-rows: 100px;
+        grid-column-gap: 5%;
+        justify-items: center;
+      }
+      .sub-menu-submit {
+        width: 100%;
+        position: static;
+      }
+      .main-components {
+        display: block;
+        height: fit-content;
+      }
+      .main-components h2 {
+        width: 80%;
+        font-size: 24px;
+        line-height: 35px;
+        margin: 50px auto 10px;
+      }
+      .box1 {
+        margin-bottom: 40px;
+      }
+      .box2 {
+        width: unset;
+      }
+      .components {
+        display: block;
+      } 
+      .iphone-features-images:nth-child(odd) {
+        align-items: center;
+        display: none;
+      }
+    }
